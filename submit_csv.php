@@ -101,23 +101,7 @@ if(empty($errors)==true) {
 }else{
     print_r($errors);
 }
-//
-//echo "<table id='Table1' class='table table-striped' >\n\n";
-//$f = fopen("images/".$file_name, "r");
-//while (($line = fgetcsv($f)) !== false) {
-//    $row = $line[0];
-//    $cells = explode(";",$row);
-//    echo "<tr>";
-//    echo "<td>"  . '<input type="checkbox">' . "</td>";
-//    foreach ($cells as $cell) {
-//
-//        echo "<td>"  . htmlspecialchars($cell) . "</td>";
-//
-//    }
-//    echo "</tr>\n";
-//}
-//fclose($f);
-//echo "\n</table>";
+
 
 
 $arr = file("files/".$file_name);
@@ -137,22 +121,6 @@ Foreach(array_splice($arr,0,10000) as &$line) {
 }
 echo "\n</table>";
 
-//echo "<table id='Table1' class='table table-striped' >\n\n";
-//$f = fopen("images/".$file_name, "r");
-//while (($line = fgetcsv($f)) !== false) {
-//    $row = $line[0];
-//    $cells = explode(";",$row);
-//    echo "<tr>";
-//    echo "<td>"  . '<input type="checkbox">' . "</td>";
-//    foreach ($cells as $cell) {
-//
-//        echo "<td>"  . htmlspecialchars($cell) . "</td>";
-//
-//    }
-//    echo "</tr>\n";
-//}
-//fclose($f);
-//echo "\n</table>";
 
 echo '<button id ="test" type="button" value="Get Selected" class="btn btn-primary">Zapisz</button>'
 ?>
@@ -201,9 +169,7 @@ echo '<button id ="test" type="button" value="Get Selected" class="btn btn-prima
                message += ";" + row.cells[3].innerHTML;
                message += ";" + row.cells[4].innerHTML;
                message += ";" + row.cells[5].innerHTML;
-             //message += ";" + row.cells[6].innerHTML;
                message += "\n";
-
 
            });
 
@@ -211,19 +177,11 @@ echo '<button id ="test" type="button" value="Get Selected" class="btn btn-prima
            $( "#test" ).remove();
            $("#hidden_form").show();
            $('#hidden_text').val(message);
-           // $( ".roww" ).append( message );
 
-
-
-
-           // alert(message);
 
            });
 
-
       </script>
-
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
