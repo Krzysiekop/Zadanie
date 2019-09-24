@@ -11,7 +11,8 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
 
     <!-- Bootstrap core CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
         .bd-placeholder-img {
@@ -35,7 +36,8 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Menu nawigacyjne</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -61,29 +63,31 @@
 
     <div class="container">
 
-<!--        <h1> Przestrzen robocza</h1>-->
+        <!--        <h1> Przestrzen robocza</h1>-->
 
         <div class="roww">
 
 
-            <form  action="submit.php" method="post" id="form">
+            <form action="submit.php" method="post" id="form">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Imie</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Imie" name="name" maxlength="20" required />
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Imie"
+                           name="name" maxlength="20" required/>
                 </div>
                 <div class="form-group">
                     <label for="phone">Nr telefonu</label>
-                    <input type="number" class="form-control" id="phone" placeholder="Nr telefonu" name="nr" min="1" max="999999999" required />
+                    <input type="number" class="form-control" id="phone" placeholder="Nr telefonu" name="nr" min="1"
+                           max="999999999" required/>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" required />
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" required/>
                 </div>
 
 
-<br>
+                <br>
 
-            <h2>Wybierz ilość formularzy</h2>
+                <h2>Wybierz ilość formularzy</h2>
 
                 <select id="select" name="nazwa">
                     <option>0</option>
@@ -100,11 +104,11 @@
                 </select>
 
 
-                <button id ="refresh" type="button"  class="btn btn-primary">Wyczysc wszystko</button>
+                <button id="refresh" type="button" class="btn btn-primary">Wyczysc wszystko</button>
         </div>
-<br>
+        <br>
         <div id="test">
-<!--           automatycznie generowane formularze-->
+            <!--           automatycznie generowane formularze-->
 
 
         </div>
@@ -118,7 +122,7 @@
 <footer class="container">
     <p>&copy; Rekrutacja &copy;
         <?php
-        $data=date("Y-m-d");
+        $data = date("Y-m-d");
         echo " $data ";
         ?>
     </p>
@@ -129,8 +133,7 @@
 <script type="text/javascript">
 
 
-
-    $('#select').on('change', function() {
+    $('#select').on('change', function () {
         let liczba = $(this).children("option:selected").val();
 
         if ($(this).val() != '0') {
@@ -198,18 +201,17 @@
 
             document.getElementById('test').appendChild(a);
         }
-            if (liczba > 0){
-               $('select').hide();
-            }
+        if (liczba > 0) {
+            $('select').hide();
+        }
 
 
     }).trigger('change');
 
 
-    $('#refresh').click(function() {
+    $('#refresh').click(function () {
         location.reload(true);
     });
-
 
 
 </script>
@@ -218,18 +220,18 @@
 
     $("body").on("change", 'input[id="wartosc"]', function (event) {
 
-        var ilosc1=$(this).val();
-        var ilosc2=$(this).prev('input').val();
-        var ilosc3= ilosc1 * ilosc2;
+        var ilosc1 = $(this).val();
+        var ilosc2 = $(this).prev('input').val();
+        var ilosc3 = ilosc1 * ilosc2;
         var wartosckoncowa = $(this).next('input').val(ilosc3);
 
     });
 
     $("body").on("change", ' input[id="ilosc"]', function (event) {
 
-        var ilosc1=$(this).val();
-        var ilosc2=$(this).next('input').val();
-        var ilosc3= ilosc1 * ilosc2;
+        var ilosc1 = $(this).val();
+        var ilosc2 = $(this).next('input').val();
+        var ilosc3 = ilosc1 * ilosc2;
         var wartosckoncowa = $(this).next().next('input').val(ilosc3);
 
     });
@@ -239,12 +241,12 @@
 
 <script>
 
-    $("body").on('change', '#form', function() {
-        var totalSum= 0;
+    $("body").on('change', '#form', function () {
+        var totalSum = 0;
 
         $('.total').each(function () {
-                totalSum +=  +$(this).val();
-            });
+            totalSum += +$(this).val();
+        });
 
         $('#calosc').val(totalSum);
 
@@ -254,8 +256,13 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
