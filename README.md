@@ -1,7 +1,8 @@
-# Zadanie
+# Zadanie rekruatacyjne 1 oraz 2
 #
-Pliki należy umieścić na serwerze w katalogu untitled. Dla przykładu dla serwera lokalnego
-xampp będzie to "C:\xampp\htdocs\untitled\"
-W folderze untitled należy utowrzyć pusty folder files.
-Ścieżka dostępu na serwerze loklanym to przykładowo: "http://localhost/untitled/index.php"
+ live demo:
+ http://livedemo3.prv.pl/untitled/index.php
+ 
+ przykładowy plik csv do zadania 2:
+ http://livedemo3.prv.pl/untitled/product.csv
 
